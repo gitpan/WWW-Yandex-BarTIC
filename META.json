@@ -34,11 +34,12 @@
          "requires" : {
             "Carp" : 0,
             "LWP::UserAgent" : 0,
+            "Object::Accessor" : 0,
             "Test::More" : 0,
             "URI::Escape" : 0
          }
       }
    },
    "release_status" : "stable",
-   "version" : "0.01"
+   "version" : "0.02"
 }
