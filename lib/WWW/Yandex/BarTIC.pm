@@ -2,7 +2,7 @@ package WWW::Yandex::BarTIC;
 use 5.006;
 use strict;
 use warnings;
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 use base 'Object::Accessor';
 
@@ -24,7 +24,7 @@ sub new {
 
   my $self = $class->SUPER::new(@ATTRS);
   $self->ua($args{ua} || LWP::UserAgent->new(agent => $DEF_UA_AGENT));
-  $self->url_template($args{ua} || $DEF_URL_TEMPLATE);
+  $self->url_template($DEF_URL_TEMPLATE);
 
   return $self;
 }
@@ -123,7 +123,7 @@ Creates a new object. If C<ua> attribute is empty, it will be created automatica
 Queries Yandex for a specified URL and returns TIC. If
 query successfull, integer value > 0 returned. If query fails
 for some reason (yandex unreachable, url does not begin from
-'http://', undefined url passed) it return C<undef>.
+'http://', undefined url passed) it returns C<undef>.
 
 In list context this function returns list from two elements where
 first is the result as in scalar context and the second is the

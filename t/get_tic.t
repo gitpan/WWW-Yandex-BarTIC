@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-use Test::More tests => 11;
+use Test::More tests => 12;
 use strict;
 use warnings;
 
@@ -42,6 +42,11 @@ SKIP: {
     skip('Define "TEST_URL" ENV to test a real query (http://cpan.org). TIC for url must be greater than 0', 4);
   }
   
+  UA: {
+    my $yb = WWW::Yandex::BarTIC->new(ua => LWP::UserAgent->new());
+    my ($tic, $resp) = $yb->get($url);
+    ok $tic > 0, 'tic works!';
+  }
   OBJECT: {
     my $yb = WWW::Yandex::BarTIC->new();
     my ($tic, $resp) = $yb->get($url);
