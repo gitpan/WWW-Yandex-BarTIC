@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
 
 use Test::More tests => 12;
+
 use strict;
 use warnings;
 
@@ -39,7 +40,7 @@ SKIP: {
   my $url = $ENV{TEST_URL};
 
   unless ($url) {
-    skip('Define "TEST_URL" ENV to test a real query (http://cpan.org). TIC for url must be greater than 0', 4);
+    skip('Define "TEST_URL" ENV to test a real query (http://cpan.org). TIC for url must be greater than 0', 5);
   }
   
   UA: {

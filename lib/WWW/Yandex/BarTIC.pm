@@ -2,7 +2,7 @@ package WWW::Yandex::BarTIC;
 use 5.006;
 use strict;
 use warnings;
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 use base 'Object::Accessor';
 
@@ -63,7 +63,7 @@ WWW::Yandex::BarTIC - Query Yandex citation index (Яндекс ТИЦ in russia
 
 =head1 VERSION
 
-Version 0.02
+Version 0.04
 
 =cut
 
@@ -139,7 +139,7 @@ details.
   $yb->ua(LWP::UserAgent->new);
   $yb->ua->agent('MyAgent');
 
-Get/Set LWP::UserAgent object for making request to Yandex
+Get/Set L<LWP::UserAgent> object for making request to Yandex
 
 =head1 AUTHOR
 
